@@ -9,15 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: "Hoovering", priority: "low"},
                 { name: "Go Shopping", priority: "high"},
             ],
-            newTodo: ''
+            newTodo: "",
+            newPriority: "",
         },
         methods: {
             saveNewTodo: function() {
                 this.todos.push({
                     name: this.newTodo,
-                    priority: "high"
+                    priority: this.newPriority
                 });
-                this.newTodo = '';
+                this.newTodo = "";
             }
         }
     });
