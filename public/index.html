@@ -23,14 +23,15 @@
           <label for="low">Low</label>
           <input type="radio" name="priority" id="low" value="low" v-model="newPriority" />
 
-          <input type="submit" value ="Save Task" />
+          <input type="submit" value ="Save Task" class="button-submit" />
       </form>
 
       <ul>
         <li
-            v-for="(todo, index) in todos"
-            v-bind:class="todo.priority === 'high' ? 'high-priority' : 'low-priority'">
-          <span>{{ todo.name }}</span>
+        v-for="(todo, index) in todos"
+        v-bind:class="todo.priority === 'high' ? 'high-priority' : 'low-priority'">
+            <span>{{ todo.name }}</span>
+            <button class="button" v-on:click="deleteTodo(index)">Remove</button>
         </li>
     </ul>
 

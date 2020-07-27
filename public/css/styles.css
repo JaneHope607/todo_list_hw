@@ -35,3 +35,18 @@
     border: 2px solid #f2360c;
     color: red;
   }
+
+input[type="text"] {
+    padding: 5px;
+    width: 30%;
+  }
+
+  .button-submit{
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #000;
+    margin: 10px;
+  }
+  

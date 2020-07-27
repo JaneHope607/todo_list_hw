@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 this.newTodo = "";
                 this.newPriority = "";
+            },
+            deleteTodo: function(index) {
+                this.todos.splice(index, 1);
             }
         }
     });
