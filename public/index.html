@@ -15,16 +15,23 @@
           <li
               v-for="(todo, index) in todos"
           >
-            <span>{{ todo }}</span>
+            <span>{{ todo.name }}</span>
           </li>
       </ul>
 
       <form v-on:submit.prevent="saveNewTodo">
           <label for="new-todo">Add a new task:</label>
           <input id="new-todo" type="text" v-model="newTodo"/>
+
+          <label for="high">High</label>
+          <input type="radio" name="priority" id="high" value="High" />
+
+          <label for="low">Low</label>
+          <input type="radio" name="priority" id="low" value="Low" />
+
           <input type="submit" value ="Save New Task" />
       </form>
-      
+
   </div>
 
 </body>
