@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             todos: [
                 { name: "Clean Bathroom", priority: "high"},
                 { name: "Hoovering", priority: "low"},
-                { name: "Go Shopping", priority: "high"},
+                { name: "Go Shopping", priority: "high"}
             ],
             newTodo: "",
             newPriority: "",
@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     priority: this.newPriority
                 });
                 this.newTodo = "";
+                this.newPriority = "";
             }
         }
     });

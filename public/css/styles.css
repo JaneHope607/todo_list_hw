@@ -4,6 +4,10 @@
     font-family: 'Lato', sans-serif;
   }
 
+  h1 {
+    font-family: 'Lato', sans-serif;
+  }
+
   ul {
     margin: 0;
     padding: 0;
@@ -15,6 +19,7 @@
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    font-weight: bold;
   }
 
   li span {
@@ -28,4 +33,5 @@
   
   li.high-priority {
     border: 2px solid #f2360c;
+    color: red;
   }

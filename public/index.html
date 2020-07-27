@@ -10,17 +10,18 @@
   <script src="./js/bundle.js"></script>
 </head>
 <body>
+    <h1>To Do List</h1>
   <div id="app">
 
       <form v-on:submit.prevent="saveNewTodo">
-          <label for="new-todo">Add a new task:</label>
+          <label for="new-todo"></label>
           <input id="new-todo" type="text" v-model="newTodo" required/>
 
           <label for="high">High</label>
-          <input type="radio" name="priority" id="high" value="High" v-model="newPriority" required/>
+          <input type="radio" name="priority" id="high" value="high" v-model="newPriority" required/>
 
           <label for="low">Low</label>
-          <input type="radio" name="priority" id="low" value="Low" v-model="newPriority" />
+          <input type="radio" name="priority" id="low" value="low" v-model="newPriority" />
 
           <input type="submit" value ="Save Task" />
       </form>
@@ -28,8 +29,7 @@
       <ul>
         <li
             v-for="(todo, index) in todos"
-            v-bind:class="todo.priority === 'high' ? 'high-priority' : 'low-priority'"
-        >
+            v-bind:class="todo.priority === 'high' ? 'high-priority' : 'low-priority'">
           <span>{{ todo.name }}</span>
         </li>
     </ul>
