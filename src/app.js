@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
             newTodo: ''
         },
         methods: {
-            saveNewTodo
+            saveNewTodo: function() {
+                this.todos.push(this.newTodo);
+                this.newTodo = '';
+            }
         }
     });
 });
